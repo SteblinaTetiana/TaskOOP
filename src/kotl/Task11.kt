@@ -2,8 +2,8 @@ package kotl
 
 fun main() {
 
-    val circle = Circle("Blue", 12.0)
-    val rectangle = Rectangle("Black", 25.0)
+    val circle = Circle("Коло","Blue", 12.0)
+    val rectangle = Rectangle("Прямокутник","Black", 25.0)
 
     circle.draw()
     rectangle.draw()
@@ -11,6 +11,7 @@ fun main() {
     val shape = arrayOf(circle, rectangle)
     for (figure in shape) {
         figure.draw()
+        println("$shape намальовано")
     }
 }
 
@@ -22,7 +23,7 @@ abstract class Shape(val color:String){
     }
 }
 
-class Circle(color: String, coordinates:Double): Shape(color){
+class Circle(name:String, color: String, coordinates:Double): Shape(color){
     override fun draw() {
     }
 
@@ -30,7 +31,7 @@ class Circle(color: String, coordinates:Double): Shape(color){
     }
 }
 
-class Rectangle(color: String, coordinates:Double):Shape(color){
+class Rectangle(name:String, color: String, coordinates:Double):Shape(color){
     override fun draw() {
     }
 
